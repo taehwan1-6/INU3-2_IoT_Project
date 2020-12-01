@@ -1,25 +1,27 @@
 import RPi.GPIO as GPIO
 import time
 
-SERVO_PIN = 18
+SERVO_PIN1 = 20
 
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(SERVO_PIN,GPIO.OUT)
+GPIO.setup(SERVO_PIN1,GPIO.OUT)
 
-servo = GPIO.PWM(SERVO_PIN,50)
-servo.start(0)
+servo1 = GPIO.PWM(SERVO_PIN1,50)
+
+servo1.start(0)
+
 
 try:
     while True:
-        servo.ChangeDutyCycle(7.5)
+        servo1.ChangeDutyCycle(7.5)
         time.sleep(1)
-        servo.ChangeDutyCycle(12.5)
+        servo1.ChangeDutyCycle(12.5)
         time.sleep(1)
-        servo.ChangeDutyCycle(2.5)
+        servo1.ChangeDutyCycle(2.5)
         time.sleep(1)
         
 except KeyboardInterrupt:
-    servo.stop()
+    servo1.stop()
     GPIO.cleanup()
