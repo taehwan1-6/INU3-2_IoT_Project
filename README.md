@@ -1,5 +1,6 @@
 # INU3-2_IoT_Project
 INU3-2_사물인터넷 프로젝트
+라즈베리파이를 이용한 손소독제 위치 및 용량을 조회해주는 자동 손소독제 디스펜서
 
 https://drive.google.com/file/d/1fsnDtGxBvcp4fBeRKvXI5gwKP-vqv-jB/view?usp=sharing
 
